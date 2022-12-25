@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Query Selector Demo">
+        <div class="slds-var-m-around_small">
+            <h1>This is Query Selector Demo</h1>
+        </div>
+        
+        <template for:each={names} for:item="name">
+            <div class="slds-var-m-around_small vsd-class" key={name}>
+                {name}
+            </div>
+        </template>
+        <lightning-button 
+            slot="actions" 
+            variant="brand" 
+            label="Fetch Details"
+            onclick={fetchDetailsHandler}>
+        </lightning-button>
+    </lightning-card>
+</template>
