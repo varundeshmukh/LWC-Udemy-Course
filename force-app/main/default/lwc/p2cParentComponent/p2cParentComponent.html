@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Progress Bar Demo">
+        <lightning-button slot="actions" label="Reset Slider" variant="brand" onclick={resetChildSlider}></lightning-button>
+        <div class="slds-m-around_small">
+            <lightning-input
+                type="number"
+                label="Percentage"
+                onkeyup={percentageHandler}
+                value={percentageValue}
+            ></lightning-input>
+            <c-p2c-progress-component progress-value={percentageValue}></c-p2c-progress-component>
+            <div class="slds-p-around_small">
+                <c-p2c-slider-component></c-p2c-slider-component>
+            </div>
+        </div>
+    </lightning-card>
+</template>

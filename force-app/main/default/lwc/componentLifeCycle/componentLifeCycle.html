@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-button 
+            slot="actions"
+            label="Show Child"
+            variant="brand"
+            onclick={showChildHandler}
+            class="slds-m-left_x-small"
+        ></lightning-button>
+        <lightning-button 
+            slot="actions"
+            label="Hide Child"
+            onclick={hideChildHandler}
+            class="slds-m-left_x-small"
+        ></lightning-button>
+        <template if:true={showChild}>
+            <c-component-life-cycle-child></c-component-life-cycle-child>
+        </template>
+    </lightning-card>
+</template>
