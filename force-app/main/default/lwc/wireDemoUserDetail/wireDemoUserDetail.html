@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <lightning-button slot="actions" label="Change User" onclick={changeUserHandler}></lightning-button>
+        <lightning-card title="User Detail Using Wire - FUNCTION">
+            <div class="slds-var-p-around_medium">
+                <template if:true={userDetails}>
+                    <div>Name - {userDetails.Name.value}</div>
+                    <div>Email - {userDetails.Email.value}</div>
+                </template>
+            </div>
+        </lightning-card>
+        <br>
+        <lightning-card title="User Detail Using Wire - PROPERTY">
+            <div class="slds-var-p-around_medium">
+                <template if:true={userDetailsProp.data}>
+                    <div>Name - {userDetailsProp.data.fields.Name.value}</div>
+                    <div>Email - {userDetailsProp.data.fields.Email.value}</div>
+                </template>
+            </div>
+        </lightning-card>
+    </lightning-card>
+</template>
