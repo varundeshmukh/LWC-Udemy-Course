@@ -1,0 +1,65 @@
+<template>
+    <lightning-card title="Create Account lightnig-record-form">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="edit"
+                onsuccess={successHandler}
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="View Account lightnig-record-form">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id="0015w00002oBuqlAAC"
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="view"
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="Read-Only Account lightnig-record-form">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id="0015w00002oBuqlAAC"
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="readonly"
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="Edit Account lightnig-record-form">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id="0015w00002oBuqlAAC"
+                object-api-name={objectName}
+                fields={fieldList}
+                mode="edit"
+                columns="2"
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+    <br>
+    <!--<lightning-card title="Edit Account lightnig-record-form">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+                mode="edit"
+                columns="2"
+                layout-type="Compact"
+            >
+            </lightning-record-form>
+        </div>
+    </lightning-card>-->
+</template>
+
+<!--0015w00002oBuqlAAC-->
