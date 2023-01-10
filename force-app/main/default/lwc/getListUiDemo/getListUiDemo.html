@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Lightning UI List Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={contacts}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={contacts} for:item="contact">
+                            <tr key={contact.fields.Id.Value}>
+                                <td>{contact.fields.Name.value}</td>
+                                <td>{contact.fields.Email.value}</td>
+                                <td>{contact.fields.Title.value}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+                <div class="slds-var-p-around_small">
+                    <lightning-button label="Prev" onclick={handlePrevPage}></lightning-button> 
+                    <p class="vsd-p slds-align_absolute-center">{currentPageToken} - {nextPageToken}</p>
+                    <lightning-button label="Next" onclick={handleNextPage} class="slds-float_right"></lightning-button> 
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
