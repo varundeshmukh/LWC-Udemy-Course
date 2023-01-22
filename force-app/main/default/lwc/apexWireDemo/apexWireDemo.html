@@ -1,0 +1,40 @@
+<template>
+    <template if:true={accountExists}>
+        <lightning-card title="Apex Wire Demo">
+            <div class="slds-var-p-around_small">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" aria-label="Example table of Opportunities with striped rows">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Name">Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Account Type">Account Type</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Industry">Industry</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={accountList} for:item="account">
+                            <tr key={account.Id} class="slds-hint-parent">
+                                <td data-label="Name">
+                                    <div class="slds-truncate" title={account.Name}>
+                                        <a href={account.accountUrl} tabindex="-1">{account.Name}</a>
+                                      </div>
+                                </td>
+                                <td data-label="Account Type">
+                                    <div class="slds-truncate" title={account.Type}>{account.typeLet}</div>
+                                </td>
+                                <td data-label="Industry">
+                                    <div class="slds-truncate" title={account.Industry}>{account.industryLet}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </lightning-card>
+    </template>
+</template>
